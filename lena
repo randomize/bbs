@@ -7,12 +7,24 @@
 # ========================================================================
 # Written with care by Bully developers using Dvorak layout in 2016
 
+"""Lena
+
+Usage:
+    lena build <profile>
+    lena --version
+
+Options:
+    -h --help   Show this screen.
+    --version   Show version.
+
+"""
+
 import sys
+from docopt import docopt
 
 def main():
-  print ('Hello from Lena')
-  # Command line args are in sys.argv[1], sys.argv[2] ..
-  # sys.argv[0] is the script name itself and can be ignored
+    arguments = docopt(__doc__, version='Lena 0.0.1')
+    print (arguments)
 
 if __name__ == "__main__":
     main()
